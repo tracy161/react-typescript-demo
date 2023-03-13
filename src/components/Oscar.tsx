@@ -5,9 +5,9 @@ type OscarProps = {
     children: React.ReactNode
 }
 
-const Oscar = (props: OscarProps) => {
+const Oscar = ({children}: OscarProps) => {
   return (
-    <div>Oscar</div>
+    <div>{children}</div>
   )
 }
 

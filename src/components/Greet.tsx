@@ -1,9 +1,9 @@
 import React from "react";
 
 // check prop types
-type GreetProps = { name: string; messageCount: number; isLoggedIn: boolean };
+type GreetProps = { name: string; messageCount?: number; isLoggedIn: boolean }; //optional type
 
-const Greet = ({ name, messageCount, isLoggedIn }: GreetProps) => {
+const Greet = ({ name, messageCount = 0, isLoggedIn }: GreetProps) => {
   return (
     <div>
       <h2>
