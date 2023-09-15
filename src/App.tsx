@@ -16,6 +16,9 @@ import Box from "./components/context/Box";
 import USerContextProvider from "./components/context/UserContext";
 import User from "./components/context/User";
 
+import { Private } from "./components/auth/Private";
+import { Profile } from "./components/auth/Profile";
+
 function App() {
   const personName = {
     first: "Bruce",
@@ -61,6 +64,8 @@ function App() {
       <USerContextProvider>
         <User />
       </USerContextProvider>
+
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
